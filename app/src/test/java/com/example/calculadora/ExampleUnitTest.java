@@ -10,8 +10,11 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
+    MainActivity main = new MainActivity():
+    
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+        assertEquals(2432902008176640000, main.Factorial(20));
+        assertEquals(21, main.Fibonacci(8));
     }
 }
