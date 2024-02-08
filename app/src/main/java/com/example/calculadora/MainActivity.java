@@ -96,14 +96,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void Fibonacci(int cantidadDeVeces, int anterior, int actual) {
+    private int Fibonacci(int cantidadDeVeces, int anterior, int actual) {
         int res = anterior + actual;
         if (cantidadDeVeces == 1) {
-            //result.setText((String.valueOf(actual)));
-            return actual;
+            // result.setText((String.valueOf(actual)));
+            System.out.println("ACTUAL: " + actual);
+
+        } else {
+            actual = Fibonacci(cantidadDeVeces - 1, actual, res);
         }
-        Fibonacci(cantidadDeVeces - 1, actual, res);
-            return 0;
+        return actual;
     }
 
 
