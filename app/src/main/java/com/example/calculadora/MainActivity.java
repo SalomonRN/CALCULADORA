@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
             result.setText((String.valueOf(rs)));
         });
         btn_fibo.setOnClickListener(w -> {
-            Fibonacci(Integer.parseInt(number_1.getText().toString()), 0,1);
+            int rs = Fibonacci(Integer.parseInt(number_1.getText().toString()), 0,1);
+            result.setText((String.valueOf(rs)));
         });
         btn_facto.setOnClickListener(w -> {
             int rs = Factorial(Integer.parseInt(number_1.getText().toString()));
@@ -98,11 +99,11 @@ public class MainActivity extends AppCompatActivity {
     private void Fibonacci(int cantidadDeVeces, int anterior, int actual) {
         int res = anterior + actual;
         if (cantidadDeVeces == 1) {
-            result.setText((String.valueOf(actual)));
-            return;
+            //result.setText((String.valueOf(actual)));
+            return actual;
         }
         Fibonacci(cantidadDeVeces - 1, actual, res);
-
+            return 0;
     }
 
 
